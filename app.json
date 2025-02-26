@@ -34,8 +34,9 @@
         "origin": false
       },
       "eas": {
-        "projectId": "504c91cb-1e59-40f0-a304-61b3b3f2c44a"
+        "projectId": "d4d0d2bd-34f6-47d8-bd57-658c3cbb6403"
       }
-    }
+    },
+    "owner": "gabrian"
   }
 }
