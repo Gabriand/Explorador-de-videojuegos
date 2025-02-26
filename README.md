@@ -38,7 +38,7 @@ npm start
 
 
 ## 🚀 Funcionalidades
-✔️ Explorar videojuegos de diferentes plataformas
+✔️ Explorar videojuegos de diferentes plataformas <br>
 ✔️ Ver descripción, fecha de lanzamiento y compatibilidad
 ✔️ Diseño optimizado para dispositivos móviles
 ✔️ Interfaz intuitiva y fácil de usar
