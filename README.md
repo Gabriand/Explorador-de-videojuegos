@@ -39,16 +39,20 @@ npm start
 
 ## 🚀 Funcionalidades
 ✔️ Explorar videojuegos de diferentes plataformas <br>
-✔️ Ver descripción, fecha de lanzamiento y compatibilidad
-✔️ Diseño optimizado para dispositivos móviles
-✔️ Interfaz intuitiva y fácil de usar
+✔️ Ver descripción, fecha de lanzamiento y compatibilidad <br>
+✔️ Diseño optimizado para dispositivos móviles <br>
+✔️ Interfaz intuitiva y fácil de usar <br>
 
 ## 🌟 Mejoras Futuras
-🔹 Agregar filtros por plataforma y año
-🔹 Implementar búsqueda avanzada
-🔹 Incluir sistema de favoritos
+🔹 Agregar filtros por plataforma y año <br>
+🔹 Implementar búsqueda avanzada <br>
+🔹 Incluir sistema de favoritos <br>
 
 ## 📜 Agradecimientos
-Un agradecimiento especial a <span style="color: #FF5733;">Midudev</span> por sus enseñanzas y por inspirarme a aprender y desarrollar este proyecto. ¡Gracias por compartir tu conocimiento con la comunidad! 🎉
+<p>
+    Un agradecimiento especial a <span style="color: #FF5733;">Midudev</span> por sus enseñanzas y por inspirarme a aprender y desarrollar este proyecto. ¡Gracias por compartir tu conocimiento con la comunidad! 🎉
+</p>
 
-✨ ¡Gracias por visitar el repositorio! No olvides dar ⭐ si te gustó. ✨
+<p align="center">
+    ✨ ¡Gracias por visitar el repositorio! No olvides dar ⭐ si te gustó. ✨
+<p>
