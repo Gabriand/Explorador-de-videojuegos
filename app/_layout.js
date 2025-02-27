@@ -2,6 +2,9 @@ import { Stack } from 'expo-router';
 import { View } from 'react-native';
 import { Logo } from '../components/Logo';
 import { Text, Pressable } from 'react-native';
+import { CircleInfoIcon } from '../components/Icons';
+import { Text, Pressable } from 'react-native';
+import { Link } from 'expo-router';
 import { styled } from 'nativewind';
 
 const StyledPressable = styled(Pressable);
@@ -19,6 +22,13 @@ export default function Layout() {
                             <Logo />
                             <Text style={{ color: '#fff', fontSize: 20, fontWeight: 'bold'}}>Keep All Games</Text>
                         </View>
+                    ),
+                    headerRight: () => (
+                        <Link asChild href="/about">
+                            <Pressable className={`pl-5 active:opacity-50`}>
+                                <CircleInfoIcon/>
+                            </Pressable>
+                        </Link>
                     ),
                 }}
             />
