@@ -1,16 +1,32 @@
-import { Pressable, ScrollView, Text } from "react-native";
+import { ScrollView, Text, Platform, StyleSheet } from "react-native";
 import { styled } from "nativewind";
 import { Screen } from "../../components/Screen";
+import useResponsive from "../../hooks/useResponsive";
 
-const StyledPressable = styled(Pressable);
+const StyledText = styled(Text);
 
 export default function About() {
+    const responsive = useResponsive();
+
     return (
         <Screen>
-            <ScrollView>
-                <Text className="text-white font-bold my-4 text-3xl text-center">Sobre el proyecto</Text>
+            <ScrollView 
+                contentContainerStyle={responsive.select({
+                    web: styles.webScollView,
+                    default: styles.mobileScrollView
+                })}
+            >
+                <StyledText 
+                    className= {responsive.isWeb ? "" : "text-white font-bold my-4 text-3xl text-center"}
+                    style={responsive.isWeb ? styles.webTitle : null} 
+                >
+                    Sobre el proyecto
+                </StyledText>
                 
-                <Text className="text-white text-white/90 mb-4">
+                <StyledText
+                    className={responsive.isWeb ? "" : "text-white text-white/90 mb-4"}
+                    style={responsive.isWeb ? styles.webParagraph : null}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                     purus auctor, ultricies ex eget, tincidunt libero. Suspendisse potenti.
                     Nullam vel nunc ac elit ultricies fermentum. Nulla facilisi. Nullam
@@ -18,9 +34,12 @@ export default function About() {
                     nec tincidunt arcu elit in libero. Nullam nec purus auctor, ultricies ex
                     eget, tincidunt libero. Suspendisse potenti. Nullam vel nunc ac elit
                     ultricies fermentum. Nulla facilisi.
-                </Text>
-
-                <Text className="text-white text-white/90 mb-4">
+                </StyledText>
+                
+                <StyledText
+                    className={responsive.isWeb ? "" : "text-white text-white/90 mb-4"}
+                    style={responsive.isWeb ? styles.webParagraph : null}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                     purus auctor, ultricies ex eget, tincidunt libero. Suspendisse potenti.
                     Nullam vel nunc ac elit ultricies fermentum. Nulla facilisi. Nullam
@@ -28,9 +47,12 @@ export default function About() {
                     nec tincidunt arcu elit in libero. Nullam nec purus auctor, ultricies ex
                     eget, tincidunt libero. Suspendisse potenti. Nullam vel nunc ac elit
                     ultricies fermentum. Nulla facilisi.
-                </Text>
-
-                <Text className="text-white text-white/90 mb-4">
+                </StyledText>
+                
+                <StyledText
+                    className={responsive.isWeb ? "" : "text-white text-white/90 mb-4"}
+                    style={responsive.isWeb ? styles.webParagraph : null}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                     purus auctor, ultricies ex eget, tincidunt libero. Suspendisse potenti.
                     Nullam vel nunc ac elit ultricies fermentum. Nulla facilisi. Nullam
@@ -38,9 +60,12 @@ export default function About() {
                     nec tincidunt arcu elit in libero. Nullam nec purus auctor, ultricies ex
                     eget, tincidunt libero. Suspendisse potenti. Nullam vel nunc ac elit
                     ultricies fermentum. Nulla facilisi.
-                </Text>
-
-                <Text className="text-white text-white/90 mb-4">
+                </StyledText>
+                
+                <StyledText
+                    className={responsive.isWeb ? "" : "text-white text-white/90 mb-4"}
+                    style={responsive.isWeb ? styles.webParagraph : null}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                     purus auctor, ultricies ex eget, tincidunt libero. Suspendisse potenti.
                     Nullam vel nunc ac elit ultricies fermentum. Nulla facilisi. Nullam
@@ -48,9 +73,12 @@ export default function About() {
                     nec tincidunt arcu elit in libero. Nullam nec purus auctor, ultricies ex
                     eget, tincidunt libero. Suspendisse potenti. Nullam vel nunc ac elit
                     ultricies fermentum. Nulla facilisi.
-                </Text>
-
-                <Text className="text-white text-white/90 mb-4">
+                </StyledText>
+                
+                <StyledText
+                    className={responsive.isWeb ? "" : "text-white text-white/90 mb-4"}
+                    style={responsive.isWeb ? styles.webParagraph : null}
+                >
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
                     purus auctor, ultricies ex eget, tincidunt libero. Suspendisse potenti.
                     Nullam vel nunc ac elit ultricies fermentum. Nulla facilisi. Nullam
@@ -58,8 +86,31 @@ export default function About() {
                     nec tincidunt arcu elit in libero. Nullam nec purus auctor, ultricies ex
                     eget, tincidunt libero. Suspendisse potenti. Nullam vel nunc ac elit
                     ultricies fermentum. Nulla facilisi.
-                </Text>
+                </StyledText>
             </ScrollView>
         </Screen>
     );
 }
+
+const styles = StyleSheet.create({
+    webScrollView: {
+        padding: 20,
+    },
+    mobileScrollView: {
+        // Estilos para móvil
+    },
+    webTitle: { 
+        color: 'black',
+        fontWeight: 'bold',
+        marginVertical: 16,
+        fontSize: 24,
+        textAlign: 'center',
+    },
+    webParagraph: {
+        color: 'black',
+        marginHorizontal: 100,
+        marginBottom: 16,
+        lineHeight: 24,
+        textAlign: 'justify'
+    }
+});

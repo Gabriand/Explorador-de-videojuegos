@@ -20,8 +20,7 @@ export default function Layout() {
                             <Text style={{ color: '#fff', fontSize: 20, fontWeight: 'bold'}}>Keep All Games</Text>
                         </View>
                     ),
-                }}
-            />
+                }}/>
         </View>
     );
 }

@@ -1,5 +1,4 @@
 import { Tabs } from "expo-router";
-import { View } from "react-native";
 
 import { CircleInfoIcon, HomeIcon } from "../../components/Icons";
 
